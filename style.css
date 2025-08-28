@@ -8,14 +8,12 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    color: white;
-    margin: 15px; 
-
-    display: flex;
-    flex-flow: column nowrap; 
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url(imagens/fundoP.png) center center no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2)
 }
 
 #container {
@@ -25,22 +23,26 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-}
-
-#opcoes, #maquina {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    margin: 10px auto;
     padding: 10px;
 }
 
+#jogador, #maquina {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 2px 5px black;
+    border-radius: 5px;
+}
+
 .botoes {
-    width: 28%;
+    width: 25%;
     background-color: transparent;
     color: white;
+    font-weight: bold;
     border: none;
     cursor: pointer;
 
@@ -48,11 +50,11 @@ body {
 }
 
 .botoes:hover {
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 #tela {
-    width: 200px;
+    width: 150px;
     margin: auto;
     position: relative;
 }
@@ -66,32 +68,61 @@ body {
 }
 
 #placar {
-    text-align: center;
-    width: 100%;
+    margin: auto;
+    width: 90%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
 }
 
 #zerar {
+    background: black;
+    color: white;
     margin: 10px;
     padding: 5px;
     border-radius: 5px;
     font-weight: bolder;
+    width: 150px;
     transition: all .5s linear;
 }
 
 #zerar:hover {
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    cursor: pointer;
+    transform: scale(1.1)
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 img {
     width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-size: contain;
+    }
+
+    #tela {
+        width: 250px;
+    }
+
+    #placar {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(imagens/fundoG.png);
+    }
 }

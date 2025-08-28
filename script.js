@@ -46,6 +46,7 @@ btn.forEach((botao) => {
                 }
                 placar.innerHTML = `Jogos: ${jogos} / Vitórias: ${vitorias} / Derrotas: ${derrotas} / Empates: ${empates}`  
                 analisando = false
+                res.innerHTML = ''
             }, 1500)
         } 
     })
@@ -65,6 +66,7 @@ zerar.addEventListener('click', function () {
         alert('Não há jogos para zerar')
     } else {
         placar.innerHTML = ''
+        resultado.innerHTML = ''
         jogos = 0
         vitorias = 0
         derrotas = 0
