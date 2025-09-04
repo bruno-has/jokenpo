@@ -9,7 +9,7 @@
 body, html {
     font-family: 'Courier New', Courier, monospace;
     background: url(imagens/fundoP.png) center center no-repeat fixed;
-    background-size: cover;
+    background-size: contain;
 
     width: 100%;
     height: 100%;
