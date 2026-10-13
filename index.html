@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jokenpô</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" media="all">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jokenpô</title>
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" media="all">
 </head>
 <body>
-    <div id="container">
-        <div id="jogador">
-            <h1>Jokenpô</h1>
-            <h2>Escolha sua jogada</h2>
-            <div id="opcoes">
-                <button id="pedra" class="botoes"><img src="imagens/pedra.png" alt="Pedra">Pedra</button>
-                <button id="papel" class="botoes"><img src="imagens/papel.png" alt="Papel">Papel</button>
-                <button id="tesoura" class="botoes"><img src="imagens/tesoura.png" alt="Tesoura">Tesoura</button>
-            </div>
-        </div>
-        <div id="maquina">
-            <h2>Escolha da máquina</h2>
-            <br>
-            <div id="tela">
-                <img src="imagens/tela.png" alt="Tela">
-                <div id="res"></div>
-            </div>
-            <h2 id="resultado"></h2>
-            <div id="placar"></div>
-        </div>
-        <button id="zerar">Zerar placar</button>
+  <div id="container">
+
+    <div id="jogador">
+      <h1>Jokenpô</h1>
+      <h2>Escolha sua jogada</h2>
+      <div id="opcoes">
+        <button id="pedra" class="botoes" type="button" aria-label="Escolher Pedra"><img src="imagens/pedra.png" alt="Pedra">Pedra</button>
+        <button id="papel" class="botoes" type="button" aria-label="Escolher Papel"><img src="imagens/papel.png" alt="Papel">Papel</button>
+        <button id="tesoura" class="botoes" type="button" aria-label="Escolher Tesoura"><img src="imagens/tesoura.png" alt="Tesoura">Tesoura</button>
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <div id="maquina">
+      <h2>Escolha da máquina</h2>
+      <div id="tela">
+        <img src="imagens/tela.png" alt="Tela">
+        <div id="resultadoMaquina"></div>
+      </div>
+      <h2 id="resultadoJogo"></h2>
+    </div>
+
+    <div id="placar">
+      <table id="tabelaPlacar">
+        <thead>
+          <tr>
+            <th>Jogos</th>
+            <th>Vitórias</th>
+            <th>Derrotas</th>
+            <th>Empates</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="qntJogos">0</td>
+            <td class="qntVitorias">0</td>
+            <td class="qntDerrotas">0</td>
+            <td class="qntEmpates">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="zerar">Zerar placar</button>
+    </div>
+    
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
