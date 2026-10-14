@@ -180,8 +180,6 @@ zerar.addEventListener('click', function () {
   atualizarPlacar()
   salvarPlacar()
 
-
-
   resultadoJogo.textContent = ''
   resultadoMaquina.textContent = ''
 })
